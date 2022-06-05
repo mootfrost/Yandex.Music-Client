@@ -1,0 +1,62 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="565"
+        Width="700" Height="565"
+        x:Class="YandexMusicUnofficialClient.Views.Register"
+        Title="Register">
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+        
+        <Style Selector="StackPanel">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+        
+        <Style Selector="TextBox.input">
+            <Setter Property="Width" Value="400"></Setter>
+            <Setter Property="Margin" Value="0, 5, 0, 5"></Setter>
+        </Style>
+        
+        <Style Selector="TextBox.login">
+            <Setter Property="Watermark" Value="Login"></Setter>
+        </Style>
+        
+        <Style Selector="TextBox.password">
+            <Setter Property="Watermark" Value="Password"></Setter>
+        </Style>
+        
+        <Style Selector="TextBox.email">
+            <Setter Property="Watermark" Value="Email"></Setter>
+        </Style>
+        
+        <Style Selector="TextBox.RepeatPassword">
+            <Setter Property="Watermark" Value="Repeat password"></Setter>
+        </Style>
+        
+        <Style Selector="Button.submit">
+            <Setter Property="Width" Value="100"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0, 5, 0, 0"></Setter>
+        </Style>
+        
+        <Style Selector="TextBlock.buttonText">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        </Style>
+    </Window.Styles>
+    
+    <Grid>
+        <StackPanel>
+            <TextBox Classes="input email"></TextBox>
+            <TextBox Classes="input login"></TextBox>
+            <TextBox Classes="input password"></TextBox>
+            <TextBox Classes="input RepeatPassword"></TextBox>
+            <Button Classes="submit"><TextBlock Classes="buttonText">Next</TextBlock></Button>
+            <Button Classes="submit"><TextBlock Classes="buttonText">Cancel</TextBlock></Button>
+        </StackPanel>
+    </Grid>
+</Window>

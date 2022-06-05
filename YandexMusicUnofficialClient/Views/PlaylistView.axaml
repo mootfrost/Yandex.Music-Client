@@ -1,0 +1,231 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="565"
+        Width="700" Height="565"
+        x:Class="YandexMusicUnofficialClient.Views.PlaylistView"
+        Title="PlaylistView">
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+        
+        <Style Selector="Button.playlistCover">
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Height" Value="200"></Setter>
+        </Style>
+        
+        <Style Selector="DockPanel.playlistData">
+            <Setter Property="Margin" Value="20"></Setter>
+        </Style>
+        
+        <Style Selector="DockPanel.playlistInfo">
+            <Setter Property="Margin" Value="30, 10, 0, 0"></Setter>
+        </Style>
+        
+        <Style Selector="Label.playlistType">
+            <Setter Property="FontWeight" Value="Light"></Setter>
+        </Style>
+        
+        <Style Selector="Label.playlistName">
+            <Setter Property="FontWeight" Value="ExtraBold"></Setter>
+            <Setter Property="FontSize" Value="35"></Setter>
+        </Style>
+        
+        <Style Selector="Label.playlistDescription">
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
+        
+        <Style Selector="DockPanel.playlistAuthorData">
+            <Setter Property="Margin" Value="0, 10, 0, 0"></Setter>
+        </Style>
+        
+        <Style Selector="Label.playlistUpdated">
+            <Setter Property="FontWeight" Value="Light"></Setter>
+        </Style>
+        
+        <Style Selector="Label.duration">
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="FontWeight" Value="Light"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
+        
+        <Style Selector="DockPanel.fastActions">
+            <Setter Property="Margin" Value="0, 20, 0, 0"></Setter>
+        </Style>
+        
+        <Style Selector="Button.playPlaylist">
+            <Setter Property="Width" Value="80"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="CornerRadius" Value="30"/>
+        </Style>
+        
+        <Style Selector="Label.songName">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="10, 0, 0, 0"></Setter>
+        </Style>
+        
+        <Style Selector="Label.songDuration">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontWeight" Value="Light"></Setter>
+            <Setter Property="FontSize" Value="13"></Setter>
+        </Style>
+        
+        <Style Selector="ListBoxItem.song:pointerover">
+            <Setter Property="Background" Value="#FF086F9E"></Setter>
+        </Style>
+        
+        <Style Selector="ListBoxItem.song:selected">
+            <Setter Property="Background" Value="Gray"></Setter>
+        </Style>
+        
+        <Style Selector="ListBoxItem.song">
+            <Setter Property="Background" Value="LightGray"></Setter>
+        </Style>
+        
+        <Style Selector="DockPanel.leftWrapper">
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        </Style>
+        
+        <Style Selector="Button.roundedBtn">
+            <Setter Property="Margin" Value="5 ,0, 0, 0"></Setter>
+            <Setter Property="Width" Value="30"></Setter>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="CornerRadius" Value="30"/>
+        </Style>
+        
+        <Style Selector="ListBox.songsWrapper">
+            <Setter Property="Height" Value="325"></Setter>
+            <Setter Property="VirtualizationMode" Value="None"></Setter>
+        </Style>
+        
+        <Style Selector="Label.songNumber">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Width" Value="30"></Setter>
+        </Style>
+    </Window.Styles>
+    
+    <Grid>
+        <StackPanel>
+            <DockPanel Classes="playlistData">
+                <Button Classes="playlistCover"></Button>
+                <DockPanel Classes="playlistInfo">
+                    <StackPanel>
+                        <Label Classes="playlistType">PLAYLIST</Label>
+                        <Label Classes="playlistName">Playlist name</Label>
+                        <Label Classes="playlistDescription">Playlist description</Label>
+                        <DockPanel Classes="playlistAuthorData">
+                            <Label>Author</Label>
+                            <Label Classes="playlistUpdated">LAST UPDATED</Label>
+                        </DockPanel>
+                        <DockPanel Classes="fastActions">
+                            <Button Classes="playPlaylist"></Button>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </StackPanel>
+                    <Label Classes="duration">Duration</Label>
+                </DockPanel>
+            </DockPanel>
+            <ListBox Classes="songsWrapper">
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+                <ListBoxItem Classes="song">
+                    <DockPanel>
+                        <DockPanel>
+                            <Label Classes="songNumber">1</Label>
+                            <Label Classes="songName">Song name</Label>
+                        </DockPanel>
+                        <DockPanel Classes="leftWrapper">
+                            <Label Classes="songDuration">Duration</Label>
+                            <Button Classes="roundedBtn"></Button>
+                        </DockPanel>
+                    </DockPanel>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

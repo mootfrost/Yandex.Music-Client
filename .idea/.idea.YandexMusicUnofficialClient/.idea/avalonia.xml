@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="YandexMusicUnofficialClient/App.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+        <entry key="YandexMusicUnofficialClient/Views/Home.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+        <entry key="YandexMusicUnofficialClient/Views/Login.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+        <entry key="YandexMusicUnofficialClient/Views/MainWindow.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+        <entry key="YandexMusicUnofficialClient/Views/PlaylistView.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+        <entry key="YandexMusicUnofficialClient/Views/Register.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+        <entry key="YandexMusicUnofficialClient/Views/updateToken.axaml" value="YandexMusicUnofficialClient/YandexMusicUnofficialClient.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
